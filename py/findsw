@@ -6,7 +6,7 @@ from time import sleep
 
 
 # 创建 WebDriver 对象，指明使用chrome浏览器驱动
-url = webdriver.Chrome(service=Service(r'D:\browser download\123\chromedriver_win32\chromedriver.exe'))
+url = webdriver.Chrome()
 url.implicitly_wait(10)
 # 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
 url.get('http://member.zhaosw.z.kucdn.cn/')
@@ -36,16 +36,19 @@ url.get('http://member.zhaosw.z.kucdn.cn/')
 
 #登录
 url.get('http://member.zhaosw.z.kucdn.cn/')
-element7 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=tel]')
-element7.send_keys('17857337167')
-element8 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=password]')
-element8.send_keys('17857337167')
+element7 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=tel]').send_keys('17857337167')
+
+element8 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=password]').send_keys('lly123456')
+
 element9 = url.find_element(By.CSS_SELECTOR, '.login-btn')
 sleep(1)
 element9.click()
-
-
-
+sleep(10)
+#发布商品
+element10 = url.find_element(By.CSS_SELECTOR, '.sub-menu>a').click()
+#获取所有商品的分类
+element11 = url.find_element(By.CSS_SELECTOR, '.el-scrollbar')
+s.select_by_value('foo')
 # element1 = url.find_element(By.ID, 'username')
 # element1.send_keys('byhy')
 # element2 = url.find_element(By.ID, 'password')
