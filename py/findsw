@@ -1,0 +1,58 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from time import sleep
+
+
+
+# 创建 WebDriver 对象，指明使用chrome浏览器驱动
+url = webdriver.Chrome(service=Service(r'D:\browser download\123\chromedriver_win32\chromedriver.exe'))
+url.implicitly_wait(10)
+# 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
+url.get('http://member.zhaosw.z.kucdn.cn/')
+# broswer = webdriver.Chrome(options = options)#隐藏浏览器
+
+#注册
+# 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
+# url.get('http://member.zhaosw.z.kucdn.cn/')
+# # broswer = webdriver.Chrome(options = options)#隐藏浏览器
+#
+# element1 = url.find_element(By.CSS_SELECTOR, 'footer > .tip > .register-link')
+# element1.click()
+# element2 = url.find_element(By.CSS_SELECTOR, 'input#name')
+# element2.send_keys('锂硫氧测试公司名')
+# element3 = url.find_element(By.CSS_SELECTOR, 'input#mobile')
+# element3.send_keys('17857337167')
+# element4 = url.find_element(By.CSS_SELECTOR, 'input#password')
+# element4.send_keys('lly123456')
+# element5 = url.find_element(By.CSS_SELECTOR, 'input#rePassword')
+# element5.send_keys('lly123456')
+# element6 = url.find_element(By.CSS_SELECTOR, 'input#agree')
+# element6.click()
+# element6 = url.find_element(By.CSS_SELECTOR, 'input.code-btn')
+# element6.click()
+# url.quit()
+
+
+#登录
+url.get('http://member.zhaosw.z.kucdn.cn/')
+element7 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=tel]')
+element7.send_keys('17857337167')
+element8 = url.find_element(By.CSS_SELECTOR, '.form-item > input[type=password]')
+element8.send_keys('17857337167')
+element9 = url.find_element(By.CSS_SELECTOR, '.login-btn')
+sleep(1)
+element9.click()
+
+
+
+# element1 = url.find_element(By.ID, 'username')
+# element1.send_keys('byhy')
+# element2 = url.find_element(By.ID, 'password')
+# element2.send_keys('88888888')
+# element3 = url.find_element(By.CLASS_NAME, 'btn')
+# element3.click()
+
+
+sleep(5)
+url.quit()
