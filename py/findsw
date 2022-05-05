@@ -9,12 +9,12 @@ from time import sleep
 url = webdriver.Chrome()
 url.implicitly_wait(10)
 # 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
-url.get('http://member.zhaosw.z.kucdn.cn/')
+url.get('')
 # broswer = webdriver.Chrome(options = options)#隐藏浏览器
 
 #注册
 # 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
-# url.get('http://member.zhaosw.z.kucdn.cn/')
+# url.get('')
 # # broswer = webdriver.Chrome(options = options)#隐藏浏览器
 #
 # element1 = url.find_element(By.CSS_SELECTOR, 'footer > .tip > .register-link')
@@ -49,12 +49,7 @@ element10 = url.find_element(By.CSS_SELECTOR, '.sub-menu>a').click()
 #获取所有商品的分类
 element11 = url.find_element(By.CSS_SELECTOR, '.el-scrollbar')
 s.select_by_value('foo')
-# element1 = url.find_element(By.ID, 'username')
-# element1.send_keys('byhy')
-# element2 = url.find_element(By.ID, 'password')
-# element2.send_keys('88888888')
-# element3 = url.find_element(By.CLASS_NAME, 'btn')
-# element3.click()
+
 
 
 sleep(5)
